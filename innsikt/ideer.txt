@@ -2,51 +2,52 @@ Ideer:
 
 CRAZY EIGHT
 
-- Kul bakgrunn man kan ta bilde foran (fotovegg), velg bakgrunn(greenscreen)/filter foran 👍
-- Velg en favoritt før man går inn, og får et tema (med ting man skal følge med på)👎
+- Kul bakgrunn man kan ta bilde foran (fotovegg), velg bakgrunn(greenscreen)/filter foran 12p
+- Velg en favoritt før man går inn, og får et tema (med ting man skal følge med på) 5p
 	- Skjerm som kun viser din info, scanner billett
-- Bingo med ting som skjer i salen
-- Kule lyddempere/ørebeskytter
-- Døve får armbånd som vibrer i takt med musikken
-- Knapp man trykker på for å få mer drikke
-- Punkt på gulvet som lager lyd
-- Bar som kan bevege seg gjennom publikum
-- VR stå-på-scene, MGP gjennom tidene
-- Hypestyrt pyro/pyro bestemt av engasjement
-- Lysshow ved inngang for hype
-- Live hypemåling i sal, kontroll med en knapp (typ app)
-- Sjekke hvilken bar med minst kø (estimated wait time)
-- Stemme koblet til salplass, se hvor i salen folk stemmer på
-- En app som gjør at publikum kan delta med lys i ulike farger
-- Artist infoskjerm
-- Lysshow blant publikum/armbånd/stoler/plassering
-- RFID salkart for servering (scann og få servert)
-- Massasjestol
-- AI-kunst
-- Kommunikasjonsenheter for staff
-- AR-app til "dress-up"
-- Choose your own MGPStory spill
-- Publikumreactions som vises på vei ut (rollercoaster type), merch
-- Spill mot programledere og artister
-- Trådløs tilkbling til lyd - headset
-- Måle lydnivå
-- Interaktive knapper ved inngang, elkjøp-opplegg
-- Lyddemping ved inngang (helt stille, noise-cancelling headset)
-- Ide til å gi rullestolbrukere bedre plasser
-- Alle lager en liten del av en del av sang, settes sammen i pausen (vha. AI)
-- Styre deler av showet med app
-- Bestille øl i app (klikk og hent)
-	- Høy-precision droner som leverer øl i hånda di
-- Noen greier som viser om det er ledig på do
-- DIY din egen MGP låt
-- Temakrone på hodet (lyser for hvilken artist de heier på)
-- Blindeseer/synstolker (noe som kan hjelpe blinde)
-- Kostymedømmer
-- Interaktiv kunst - bilder på gulv
-- Fotobooth - bilder kommer på skjerm i pausen
-- Tryllestav-prosjektor (disney)*
-- Nettsiden har kamera som viser hvordan utsikten fra setet er (3D modell) ||
-- Headset som oversetter sang til andre språk
-- Buss-system slik at det ikke blir kaos etter show
-- Valg av kameravinkel
-- Ballong som blåser seg opp etter hype/antall stemmer, konfetti
+- Bingo med ting som skjer i salen 4p
+- Kule lyddempere/ørebeskytter 6p
+- Døve får armbånd som vibrer i takt med musikken 11p
+- Knapp man trykker på for å få mer drikke 0p
+- Punkt på gulvet som lager lyd 8p
+- Bar som kan bevege seg gjennom publikum 0p
+- VR stå-på-scene, MGP gjennom tidene 5p
+- Hypestyrt pyro/pyro bestemt av engasjement 5p
+- Lysshow ved inngang for hype 6p
+- Live hypemåling i sal, kontroll med en knapp (typ app) 7p
+- Sjekke hvilken bar med minst kø (estimated wait time) 9p
+- Stemme koblet til salplass, se hvor i salen folk stemmer på 8p
+- En app som gjør at publikum kan delta med lys i ulike farger 3p
+- Artist infoskjerm 4p
+- Lysshow blant publikum/armbånd/stoler/plassering 7p
+- RFID salkart for servering (scann og få servert) 1p
+- Massasjestol 2p 
+- AI-kunst 10p
+- Kommunikasjonsenheter for staff 0p
+- AR-app til "dress-up" 3p
+- Choose your own MGPStory spill 0p
+- Publikumreactions som vises på vei ut (rollercoaster type), merch 4p
+- Spill mot programledere og artister 4p
+- Trådløs tilkbling til lyd - headset 4p
+- Måle lydnivå 1p
+- Interaktive knapper ved inngang, elkjøp-opplegg 0p
+- Lyddemping ved inngang (helt stille, noise-cancelling headset) 11p
+- Ide til å gi rullestolbrukere bedre plasser 0p
+- Alle lager en liten del av en del av sang, settes sammen i pausen (vha. AI) 4p
+- Styre deler av showet med app 2p
+- Bestille øl i app (klikk og hent) 3p
+- Høy-precision droner som leverer øl i hånda di 0p
+- Noen greier som viser om det er ledig på do 9p
+- DIY din egen MGP låt 1p
+- Temakrone på hodet (lyser for hvilken artist de heier på)8p
+- Blindeseer/synstolker (noe som kan hjelpe blinde) 0p
+- Kostymedømmer 2p
+- Interaktiv kunst - bilder på gulv 9p
+- Fotobooth - bilder kommer på skjerm i pausen 2p
+- Tryllestav-prosjektor (disney)* 11p
+- Nettsiden har kamera som viser hvordan utsikten fra setet er (3D modell) 5p
+- Headset som oversetter sang til andre språk 0p
+- Buss-system slik at det ikke blir kaos etter show 0p
+- Valg av kameravinkel 6p
+- Ballong som blåser seg opp etter hype/antall stemmer, konfetti 10p 
+- Bilde fremstilt av lyd 8p
