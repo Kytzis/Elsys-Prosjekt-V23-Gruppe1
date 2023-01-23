@@ -1,0 +1,27 @@
+\documentclass[a4paper,11pt,norsk]{article}
+
+% Importing document settings from our file "packages.sty"
+\usepackage{packages}
+
+%Begynner dokument
+\begin{document}
+
+% Tabell med tittel osv. 
+\import{./}{heading}
+%sammendrag og forkortelser som skrives her.
+\section*{Sammendrag}
+\section*{Forkortelser og informasjon}
+\rule{\textwidth}{1pt}
+%Importerer seksjoner
+\import{./Sections/}{bakgrunn}
+\import{./Sections/}{problemstilling}
+\import{./Sections/}{konsept}
+\import{./Sections/}{design}
+\import{./Sections/}{implementering}
+\import{./Sections/}{tvv}
+\import{./Sections/}{drofting}
+\import{./Sections/}{konklusjon}
+\import{./Sections/}{takk}
+\import{./Sections/}{refrences}
+\import{./appendix/}{appendix}
+\end{document}
