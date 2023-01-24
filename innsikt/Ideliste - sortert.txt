@@ -1,0 +1,49 @@
+- Kul bakgrunn man kan ta bilde foran (fotovegg), velg bakgrunn(greenscreen)/filter foran 	:12p
+- Døve får armbånd som vibrer i takt med musikken 						:11p
+- Lyddemping ved inngang (helt stille, noise-cancelling headset) 				:11p
+- Tryllestav-prosjektor (disney)* 								:11p
+- AI-kunst 											:10p
+- Ballong som blåser seg opp etter hype/antall stemmer, konfetti 				:10p
+- Sjekke hvilken bar med minst kø (estimated wait time) 					:9p
+- Noen greier som viser om det er ledig på do 							:9p
+- Interaktiv kunst - bilder på gulv 								:9p
+- Punkt på gulvet som lager lyd 								:8p
+- Stemme koblet til salplass, se hvor i salen folk stemmer på 					:8p
+- Temakrone på hodet (lyser for hvilken artist de heier på)					:8p
+- Bilde fremstilt av lyd 									:8p
+- Live hypemåling i sal, kontroll med en knapp (typ app) 					:7p
+- Lysshow blant publikum/armbånd/stoler/plassering 						:7p
+- Kule lyddempere/ørebeskytter 									:6p
+- Lysshow ved inngang for hype 									:6p
+- Valg av kameravinkel 										:6p
+- Velg en favoritt før man går inn, og får et tema (med ting man skal følge med på) 		:5p
+- VR stå-på-scene, MGP gjennom tidene 								:5p
+- Hypestyrt pyro/pyro bestemt av engasjement 							:5p
+- Nettsiden har kamera som viser hvordan utsikten fra setet er (3D modell) 			:5p
+- Bingo med ting som skjer i salen 								:4p
+- Artist infoskjerm 										:4p
+- Publikumreactions som vises på vei ut (rollercoaster type), merch 				:4p
+- Spill mot programledere og artister 								:4p
+- Trådløs tilkbling til lyd - headset 								:4p
+- Alle lager en liten del av en del av sang, settes sammen i pausen (vha. AI) 			:4p
+- En app som gjør at publikum kan delta med lys i ulike farger 					:3p
+- AR-app til "dress-up" 									:3p
+- Bestille øl i app (klikk og hent) 								:3p
+- Massasjestol 											:2p
+- Styre deler av showet med app 								:2p
+- Kostymedømmer 										:2p
+- Fotobooth - bilder kommer på skjerm i pausen 							:2p
+- RFID salkart for servering (scann og få servert) 						:1p
+- Måle lydnivå 											:1p
+- DIY din egen MGP låt 										:1p
+- Knapp man trykker på for å få mer drikke 							:0p
+- Bar som kan bevege seg gjennom publikum 							:0p
+- Kommunikasjonsenheter for staff 								:0p
+- Choose your own MGPStory spill 								:0p
+- Interaktive knapper ved inngang, elkjøp-opplegg 						:0p
+- Ide til å gi rullestolbrukere bedre plasser 							:0p
+- Høy-precision droner som leverer øl i hånda di 						:0p
+- Blindeseer/synstolker (noe som kan hjelpe blinde) 						:0p
+- Headset som oversetter sang til andre språk 							:0p
+- Buss-system slik at det ikke blir kaos etter show 						:0p
+- Skjerm som kun viser din info, scanner billett
