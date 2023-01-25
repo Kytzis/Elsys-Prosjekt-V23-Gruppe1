@@ -1,0 +1,30 @@
+GB:
+- Programmering
+	- Kommunikasjonsprotokoller (eks. WiFi)
+- Elektronisk ventil
+Brukerevne:
+- App med knapp
+- Nettside
+
+- Stoppe under sang
+- Knytte det som er inni ballongen til noe som skjer i showet (eks. vinner, hvem som kommer videre)
+
+Ulemper:
+- Opprydding før neste del av showet
+
+AiK:
+- Programmering (brukerinput)
+- Bevegelsessensor
+- Lydsensor
+
+DAb:
+- Programmering og kommunikasjon (En sentral styreenhetet)
+- Lage elektronikk
+- Batteridrevet
+
+- Time med sangen (forhåndsprogrammert eller sende signaler fra bass)
+
+DK:
+- Programmering/maskinlæring
+- Sensorer
+- App med kart over lokalet, total reisetid (med venting)
