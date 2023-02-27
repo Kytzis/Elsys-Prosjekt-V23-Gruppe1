@@ -12,7 +12,6 @@
 #define SCREEN_HEIGHT 64
 
 Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, -1);
-
 #pragma once
 
 #define SV0LO6_BMPWIDTH  128
