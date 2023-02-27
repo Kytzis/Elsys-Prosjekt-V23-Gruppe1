@@ -12,14 +12,7 @@
 #define SCREEN_HEIGHT 64
 
 Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, -1);
-#pragma once
 
-/**
- * Made with Marlin Bitmap Converter
- * https://marlinfw.org/tools/u8glib/converter.html
- *
- * This bitmap from the file 'animesher.com_polar-bear-cafe-panda-cute-1234057.bmp'
- */
 #pragma once
 
 #define SV0LO6_BMPWIDTH  128
