@@ -1,0 +1,68 @@
+\section{Design}
+\label{sec:design}
+
+\subsection{Optikk}
+
+%Optisk design må oppfylle systemkrav 2.2,  som videre oppfyller brukerkrav 2.1-2.2. 
+
+For at innretningen skal være komfortabel for øynene, er det viktig å utvikle optikken med dette i baktankene. Dette kravet gjenspeiles i systemkrav 2.2, og videre i brukerkrav 2.1-2.2.
+
+Optisk design vil bestå av en metode å projisere/avbilde tekst på en skjerm til innsiden av et plexiglass. Metoden består av et speil og en linse, og illustreres i figur \ref{fig:optikk}. 
+
+%bilde her
+
+%A mirror is a wave reflector. Light consists of waves, and when light waves reflect from the flat surface of a mirror, those waves retain the same degree of curvature and vergence, in an equal yet opposite direction, as the original waves. This allows the waves to form an image when they are focused through a lens, just as if the waves had originated from the direction of the mirror. 
+
+Speilet samler det utsendte lyset fra skjermen, og forhindrer at lyset blir spredt utover slik at teksten holder seg klar. Speilet blir også brukt som en reflektor, og lyset som speilet samler inn blir sendt ut igjen. Når lysbølger reflekteres fra et speil, vil de beholde samme kurvatur og styrke, men i motsatt retning av den innsendte bølgen. Dette gjør at bildet blir invertert, altså speilvendt, som er ønskelig fordi skjermen peker i samme retning som øyet og må dermed inverteres for å kunne avbilde tekst i vanlig retning. Hvis en lysbølge med vinkel $\theta_i$ relativ normalen til et speil treffer speilet, er vinkelen på den tilhørende reflekterte lysbølgen, $\theta_r$, gitt ved
+
+\begin{equation}
+    \theta_i = \theta_r.
+\end{equation}
+
+%illustrasjon?
+
+Dersom det er avstand mellom speilet og skjermen, vil teksten oppleves liten og/eller utydelig. Det er dermed ønskelig å gjøre teksten større og samle de utspredte lysbølgene fra speilet, og det kan oppnås ved bruk av en linse. Linsen har en kurvatur, og vil ved hjelp av refraksjon (lysbrytning) bøye lysbølgene til et felles punkt, kalt brennpunkt, hvor teksten vil oppleves som klar og tydelig. Avstanden til brennpunktet kalles brennvidden, $f$, og er gitt ved formelen:
+
+\begin{equation}
+    \frac{1}{f} = (n_{linse}-1)\Bigg( \frac{1}{R_1}-\frac{1}{R_2}\Bigg),
+\end{equation}
+
+hvor $n_{linse}$ er brytningsindeksen til linsen, og $R_1$ og $R_2$ krumningsradiusen til linsens to sider. Figur \ref{} illustrerer de ovenfornevnte verdiene. 
+
+%illustrasjon
+
+Dersom objektet ligger nærmere linsen enn det dobbelte av brennvidden, vil bildet bli forstørret. Teksten vil da oppleves som enklere å lese.
+
+\iffalse
+kilder:
+http://hyperphysics.phy-astr.gsu.edu/hbase/geoopt/lenscon.html#c1
+https://www.uio.no/studier/emner/matnat/fys/FYS2150/v19/kursmateriell/avbildning/avbildning.pdf
+https://en.wikipedia.org/wiki/Mirror
+
+\fi
+
+\subsection{Programvare}
+
+For å kunne hente tekstingen fra NRK og putte denne på brillene, trengs en del programvare, og dermed også litt tenking rundt programvarearkitekturen. Det ble derfor tidlig i prosjektet designet to ulike oppsett av programvaren, som begge vil funke med det gitte elektroniske designet.
+
+Den første arkitekturen baserer seg på å minimalisere mengde programvare og oppsett som trengs på NRK sin side. Dette gjør at arkitekturen først og fremst gjør utregninger knyttet til splitting og bytting av tekst på mikrokontrolleren, som vist i figur \ref{fig:programvare1}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics{rapport/Images/design/programvare1.png}
+    \caption{Første mulige programvarearkitektur, med mye utregninger på mikrokontroller.}
+    \label{fig:programvare1}
+\end{figure}
+
+Denne arkitekturen splitter opp koden i ulike deler som gjør veldig distinkte ting. Det som er spesielt merkbart med dette første designet er hvordan veldig lite foregår utenfor mikrokontrollere, noe som gjør at koden på mikrokontrolleren blir stor, og må tilpasses det faktum at lite gjøres utenfor. Dette er blant annet synlig ved at flere av delene inne på mikrokontrolleren vil være nødt til å operere med strømmer av data, da lengder er veldig uvisst og kan endres.
+
+Den andre arkitekturen som ble laget gikk noe bort ifra ideen om å minimalisere server-siden, og har derfor en del mindre logikk på mikrokontrolleren. Dette gjør at vanskeligere oppgaver kan flyttes til server-siden, hvor vi som implementere står mer fritt til å velge programmeringsspråk og pakker som er gunstige. Denne tankegangen førte til designet i figur \ref{fig:programvare2}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics{rapport/Images/design/programvare2.png}
+    \caption{Andre mulighet for programvarearkitektur, med mer arbeid gjort på server-siden.}
+    \label{fig:programvare2}
+\end{figure}
+
+Fordelene med denne arkitekturen ovenfor den første, er hovedsakelig at mikrokontrolleren mister mye ansvar og kan forenkles. Denne reduserte arbeidsmengden gjør at mikrokontrolleren absolutt vil ha tilstrekkelig regnekraft, og fjerner potensielle tester av ytelse som kunne vært nødvendig for arkitektur 1. I tillegg vil som nevnt vanskeligere kode som oppdeling av tekst og timing av når en skal bytte tekst kunne gjøres på server-siden, der ytelse ikke vil være et problem, og det er noe mindre forsinkelser fra original-kilden til teksten.

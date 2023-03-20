@@ -1,11 +1,8 @@
 \documentclass[a4paper,11pt,norsk]{article}
-
 % Importing document settings from our file "packages.sty"
 \usepackage{packages}
-
 %Begynner dokument
 \begin{document}
-
 % Tabell med tittel osv. 
 \import{./}{heading}
 %sammendrag og forkortelser som skrives her.
@@ -13,15 +10,18 @@
 \section*{Forkortelser og informasjon}
 \rule{\textwidth}{1pt}
 %Importerer seksjoner
-\import{./Sections/}{bakgrunn}
-\import{./Sections/}{problemstilling}
-\import{./Sections/}{konsept}
-\import{./Sections/}{design}
-\import{./Sections/}{implementering}
-\import{./Sections/}{tvv}
-\import{./Sections/}{drofting}
-\import{./Sections/}{konklusjon}
-\import{./Sections/}{takk}
+\import{./Sections/}{1bakgrunn}
+\import{./Sections/}{2problemstilling}
+\import{./Sections/}{3innsikt}
+\import{./Sections/}{4konsept}
+\import{./Sections/}{5design}    
+\import{./Sections/}{6implementering}
+\import{./Sections/}{7tvv}
+\import{./Sections/}{8drofting}
+\import{./Sections/}{9konklusjon}
+\import{./Sections/}{10takk}
 \import{./Sections/}{refrences}
 \import{./appendix/}{appendix}
+% Prosjektnavn
+\def\Projectname{EyeText}
 \end{document}
