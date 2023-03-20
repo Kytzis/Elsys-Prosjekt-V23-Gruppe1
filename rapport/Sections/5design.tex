@@ -13,7 +13,7 @@ Optisk design vil bestå av en metode å projisere/avbilde tekst på en skjerm t
 
 %A mirror is a wave reflector. Light consists of waves, and when light waves reflect from the flat surface of a mirror, those waves retain the same degree of curvature and vergence, in an equal yet opposite direction, as the original waves. This allows the waves to form an image when they are focused through a lens, just as if the waves had originated from the direction of the mirror. 
 
-Speilet samler det utsendte lyset fra skjermen, og forhindrer at lyset blir spredt utover slik at teksten holder seg klar. Speilet blir også brukt som en reflektor, og lyset som speilet samler inn blir sendt ut igjen. Når lysbølger reflekteres fra et speil, vil de beholde samme kurvatur og styrke, men i motsatt retning av den innsendte bølgen. Dette gjør at bildet blir invertert, altså speilvendt, som er ønskelig fordi skjermen peker i samme retning som øyet og må dermed inverteres for å kunne leses. Hvis en lysbølge med vinkel $\theta_i$ relativ normalen til et speil treffer speilet, er vinkelen på den tilhørende reflekterte lysbølgen, $\theta_r$, gitt ved
+Speilet samler det utsendte lyset fra skjermen, og forhindrer at lyset blir spredt utover slik at teksten holder seg klar. Speilet blir også brukt som en reflektor, og lyset som speilet samler inn blir sendt ut igjen. Når lysbølger reflekteres fra et speil, vil de beholde samme kurvatur og styrke, men i motsatt retning av den innsendte bølgen. Dette gjør at bildet blir invertert, altså speilvendt, som er ønskelig fordi skjermen peker i samme retning som øyet og må dermed inverteres for å kunne avbilde tekst i vanlig retning. Hvis en lysbølge med vinkel $\theta_i$ relativ normalen til et speil treffer speilet, er vinkelen på den tilhørende reflekterte lysbølgen, $\theta_r$, gitt ved
 
 \begin{equation}
     \theta_i = \theta_r.
@@ -21,7 +21,25 @@ Speilet samler det utsendte lyset fra skjermen, og forhindrer at lyset blir spre
 
 %illustrasjon?
 
-Dersom det er avstand mellom speilet og skjermen, vil teksten oppleves liten og/eller utydelig. Det er dermed ønskelig å gjøre teksten større og samle de utspredte lysbølgene fra speilet, og det kan oppnås ved bruk av en linse. Linsen vil ved hjelp av refraksjon vil fokusere alle de utspredte lysbølgene til et punkt kalt brennpunkt
+Dersom det er avstand mellom speilet og skjermen, vil teksten oppleves liten og/eller utydelig. Det er dermed ønskelig å gjøre teksten større og samle de utspredte lysbølgene fra speilet, og det kan oppnås ved bruk av en linse. Linsen har en kurvatur, og vil ved hjelp av refraksjon (lysbrytning) bøye lysbølgene til et felles punkt, kalt brennpunkt, hvor teksten vil oppleves som klar og tydelig. Avstanden til brennpunktet kalles brennvidden, $f$, og er gitt ved formelen:
+
+\begin{equation}
+    \frac{1}{f} = (n_{linse}-1)\Bigg( \frac{1}{R_1}-\frac{1}{R_2}\Bigg),
+\end{equation}
+
+hvor $n_{linse}$ er brytningsindeksen til linsen, og $R_1$ og $R_2$ krumningsradiusen til linsens to sider. Figur \ref{} illustrerer de ovenfornevnte verdiene. 
+
+%illustrasjon
+
+Dersom objektet ligger nærmere linsen enn det dobbelte av brennvidden, vil bildet bli forstørret. Teksten vil da oppleves som enklere å lese.
+
+\iffalse
+kilder:
+http://hyperphysics.phy-astr.gsu.edu/hbase/geoopt/lenscon.html#c1
+https://www.uio.no/studier/emner/matnat/fys/FYS2150/v19/kursmateriell/avbildning/avbildning.pdf
+https://en.wikipedia.org/wiki/Mirror
+
+\fi
 
 \subsection{Programvare}
 
@@ -31,7 +49,7 @@ Den første arkitekturen baserer seg på å minimalisere mengde programvare og o
 
 \begin{figure}[H]
     \centering
-    \includegraphics{rapport/Images/Design/programvare1.png}
+    \includegraphics{rapport/Images/design/programvare1.png}
     \caption{Første mulige programvarearkitektur, med mye utregninger på mikrokontroller.}
     \label{fig:programvare1}
 \end{figure}
@@ -42,7 +60,7 @@ Den andre arkitekturen som ble laget gikk noe bort ifra ideen om å minimalisere
 
 \begin{figure}[H]
     \centering
-    \includegraphics{rapport/Images/Design/programvare2.png}
+    \includegraphics{rapport/Images/design/programvare2.png}
     \caption{Andre mulighet for programvarearkitektur, med mer arbeid gjort på server-siden.}
     \label{fig:programvare2}
 \end{figure}
