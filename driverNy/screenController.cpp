@@ -1,21 +1,19 @@
-#include "screencontroller.h"
+#include "screenController.h"
 
-ScreenController::ScreenController() {
-    _display = Adafruit_SSD1306(_width, _height, &Wire, _reset_pin);
-    // SSD1306_SWITCHCAPVCC = generate display voltage from 3.3V internally
-    if(!_display.begin(SSD1306_SWITCHCAPVCC, _address)) {
-        Serial.println(F("SSD1306 allocation failed"));
-        for(;;); // Don't proceed, loop forever
+void init(Adafruit_SSD1306* display) {
+    Serial.begin(57600);
+    if (!display->begin(SSD1306_SWITCHCAPVCC, 0x3C)) {
+        Serial.println(F("SSD1306 Allocation failed"));
+        for(;;); // Get stuck
     }
-    Serial.println(F("Test"));
-    delay(2000);
+    display->display();
 }
 
-int ScreenController::write(String text) {
-    _display.clearDisplay();             // Clears display buffer
-    _display.setTextSize(1);             
-    _display.setTextColor(WHITE);       
-    _display.setCursor(0,0);             // Start printing at top-left corner
-    _display.println(F("Test")); 
-    _display.display();                  //displays the text on screen
+void write(String text, Adafruit_SSD1306* display) {
+    display->clearDisplay();             // Clears display buffer
+    display->setTextSize(1);             
+    display->setTextColor(WHITE);       
+    display->setCursor(0,0);             // Start printing at top-left corner
+    display->println(text); 
+    display->display();                  //displays the text on screen
 }

@@ -36,12 +36,12 @@ class MyServer(BaseHTTPRequestHandler):
     def getCurrentIndex(self):
         global screenTime, curIndex
         # Update index
-        while int(time.time() * 1000) - screenTime >= data[str(curIndex)][0]:
-            if data[str(curIndex+1)][1] == "\n":
+        while int(time.time() * 1000) - screenTime >= data[curIndex][0]:
+            if data[curIndex+1][1] == "\n":
                 curIndex = 0    # Reset to screen 0
             else:
                 curIndex += 1   # Progress to next screen
-            screenTime += data[str(curIndex)][0]
+            screenTime += data[curIndex][0]
 
         print(f"Sending current index: {curIndex}")
         self.wfile.write(bytes(str(curIndex), "utf-8"))
@@ -49,7 +49,7 @@ class MyServer(BaseHTTPRequestHandler):
 
     def getData(self, index=-1):
         print(f"Sending data for screen {index}.")
-        self.wfile.write(bytes(data[str(index)][1], "utf-8"))
+        self.wfile.write(bytes(data[index][1], "utf-8"))
 
 
 # Loop to run shit
