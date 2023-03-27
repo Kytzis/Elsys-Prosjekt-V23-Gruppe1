@@ -1,7 +1,7 @@
 #include "screenController.h"
 
+
 void init(Adafruit_SSD1306* display) {
-    Serial.begin(57600);
     if (!display->begin(SSD1306_SWITCHCAPVCC, 0x3C)) {
         Serial.println(F("SSD1306 Allocation failed"));
         for(;;); // Get stuck
