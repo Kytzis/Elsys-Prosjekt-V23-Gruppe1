@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fire videoer</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+		}
+		
+		video {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 50vw;
+			height: 50vh;
+		}
+		
+		video:nth-child(1) {
+			top: 0;
+			left: 0;
+		}
+		
+		video:nth-child(2) {
+			top: 0;
+			left: 50vw;
+		}
+		
+		video:nth-child(3) {
+			top: 50vh;
+			left: 0;
+		}
+		
+		video:nth-child(4) {
+			top: 50vh;
+			left: 50vw;
+		}
+	</style>
+</head>
+<body>
+	<video src="/Video/Alessandra - Queen Of Kings.mp4" loop></video>
+	<video src="/Video/Maskorama.mp4"  loop></video>
+	<video src="/Video/Årets Ildsjel - Idretsgalla 2023.mp4"  loop></video>
+	<video src="/Video/Martin Lepperød - Vikarlærer.mp4" loop></video>
+
+    <script>
+		const videos = document.querySelectorAll('video');
+		let videoNr = null;
+		const videoTime = [0,0,0,0]
+		
+		videos.forEach((video, index) => {
+			video.addEventListener('click', () => {
+				videos.forEach((otherVideo, otherIndex) => {
+					if (otherVideo !== video) {
+						otherVideo.pause();
+					}
+					videoTime[otherIndex] = otherVideo.currentTime*1000;
+				});
+				video.play();
+				videoNr = index + 1;
+				console.log('Video nr. ' + videoNr + ' spilles nå.');
+				console.log("Current Video time: " + videoTime[index])
+			});
+		});
+	</script>
+
+</body>
+</html>
