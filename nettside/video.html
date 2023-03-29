@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Fire videoer</title>
+	<title>EyeText</title>
 	<style>
 		body {
 			margin: 0;
@@ -47,6 +47,7 @@
 		const videos = document.querySelectorAll('video');
 		let videoNr = null;
 		const videoTime = [0,0,0,0]
+		const data = [null, null]
 		
 		videos.forEach((video, index) => {
 			video.addEventListener('click', () => {
@@ -56,6 +57,9 @@
 					}
 					videoTime[otherIndex] = otherVideo.currentTime*1000;
 				});
+				data[0] = index;
+				data[1] = video.currentTime;
+				
 				video.play();
 				videoNr = index + 1;
 				console.log('Video nr. ' + videoNr + ' spilles nå.');
