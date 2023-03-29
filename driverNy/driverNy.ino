@@ -33,4 +33,5 @@ void loop() {
         payload = getFrame(serverIP, frameIndex);
         write(String(payload), &display);
     }
+    delay(50);
 }

@@ -46,7 +46,7 @@ class MyServer(BaseHTTPRequestHandler):
 
 
     def getData(self, index: int=-1):
-        self.wfile.write(bytes(data[index][1], "utf-8"))
+        self.wfile.write(bytes("\n\n" + data[index][1], "utf-8"))
 
 
 # Loop to run shit
