@@ -6,8 +6,8 @@ import time
 
 # Server settings
 hostname = 'localhost'
-serverPort = 8000
-dataName = "video4"
+serverPort = 8001
+dataName = "1"
 
 
 # Hacky way to expose stuff publicly for the request handler
@@ -29,7 +29,7 @@ class MyServer(BaseHTTPRequestHandler):
         self.send_response(200)
         postvars = self.parse_POST()
         dataName = postvars[id]
-        screenTime = int(time.time() * 1000) - postvars[time]
+        screenTime = int(time.time() * 1000) - float(postvars[time])
         curIndex = 0
 
 
@@ -47,9 +47,14 @@ class MyServer(BaseHTTPRequestHandler):
     
     
     def parse_POST(self):
+        content_length = self.headers.getheaders('content-length')
+        length = int(content_length[0]) if content_length else 0
         ctype, pdict = parse_header(self.headers['content-type'])
+        print(self.rfile.read(length))
         if ctype == 'multipart/form-data':
             postvars = parse_multipart(self.rfile, pdict)
+        elif ctype == 'application/json':
+            postvars = {}
         else:
             postvars = {}
         return postvars
