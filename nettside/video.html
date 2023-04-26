@@ -42,10 +42,10 @@
 	</style>
 </head>
 <body>
-	<video src="/Video/Alessandra - Queen Of Kings.mp4" loop></video>
-	<video src="/Video/Maskorama.mp4"  loop></video>
-	<video src="/Video/Årets Ildsjel - Idretsgalla 2023.mp4"  loop></video>
-	<video src="/Video/Martin Lepperød - Vikarlærer.mp4" loop></video>
+	<video src="video/1.mp4" loop></video>
+	<video src="video/2.mp4"  loop></video>
+	<video src="video/3.mp4"  loop></video>
+	<video src="video/4.mp4" loop></video>
 
     <script>
 		const videos = document.querySelectorAll('video');
@@ -69,8 +69,9 @@
 					id: videoNr,
 					time: videoTime[videoNr],
 				}
+                console.log(JSON.stringify(data))
 				// a POST request
-				const response = fetch('localhost:8001/setvideo', {
+				const response = fetch('http://192.168.116.202:8001/setvideo', {
 					method: 'POST',
 					headers: {
 						'Content-Type': 'application/json; charset=utf-8'

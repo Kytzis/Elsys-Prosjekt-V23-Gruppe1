@@ -5,7 +5,7 @@ import time
 
 
 # Server settings
-hostname = 'localhost'
+hostname = '192.168.116.202'
 serverPort = 8001
 dataName = "1"
 
@@ -20,16 +20,32 @@ curIndex = 0
 
 # Server
 class MyServer(BaseHTTPRequestHandler):
+    def do_OPTIONS(self):
+        if self.path != '/setvideo':
+            self.send_error(400, message="bad request", epxlain="OPTIONS are not supported on this path")
+            self.log_error(400)
+            return
+        
+        self.send_response(200)
+        self.send_header('Access-Control-Allow-Origin', '*')
+        self.send_header('Access-Control-Allow-Methods','GET, POST, PUT, DELETE, OPTIONS')
+        self.send_header('Access-Control-Allow-Headers', 'Content-Type, Authorization')
+        self.end_headers()
+
+
     def do_POST(self):
-        global dataName, screenTime, curIndex
-        if self.path() != "/setvideo":
+        global dataName, data, screenTime, curIndex
+        if self.path != "/setvideo":
             self.send_error(400, message="bad POST", explain="POST request was sent on a path that is not supported")
             self.log_error(code=400)
-
+            return
+        
         self.send_response(200)
         postvars = self.parse_POST()
-        dataName = postvars[id]
-        screenTime = int(time.time() * 1000) - float(postvars[time])
+        dataName = postvars['id']
+        with open("nettside/tekst.json", "r") as file:
+            data = json.loads("".join(file.readlines()))[str(dataName)]
+        screenTime = int(time.time() * 1000) - float(postvars['time'])
         curIndex = 0
 
 
@@ -47,14 +63,13 @@ class MyServer(BaseHTTPRequestHandler):
     
     
     def parse_POST(self):
-        content_length = self.headers.getheaders('content-length')
-        length = int(content_length[0]) if content_length else 0
+        content_length = self.headers['Content-Length']
+        length = int(content_length) if content_length else 0
         ctype, pdict = parse_header(self.headers['content-type'])
-        print(self.rfile.read(length))
         if ctype == 'multipart/form-data':
             postvars = parse_multipart(self.rfile, pdict)
         elif ctype == 'application/json':
-            postvars = {}
+            postvars = json.loads(self.rfile.read(length))
         else:
             postvars = {}
         return postvars
