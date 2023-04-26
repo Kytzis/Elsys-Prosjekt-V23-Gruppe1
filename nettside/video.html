@@ -1,7 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>EyeText</title>
+
 	<style>
 		body {
 			margin: 0;
@@ -47,9 +51,8 @@
 		const videos = document.querySelectorAll('video');
 		let videoNr = null;
 		const videoTime = [0,0,0,0]
-		const data = [null, null]
 		
-		videos.forEach((video, index) => {
+		videos.forEach( async function (video, index) {
 			video.addEventListener('click', () => {
 				videos.forEach((otherVideo, otherIndex) => {
 					if (otherVideo !== video) {
@@ -57,15 +60,31 @@
 					}
 					videoTime[otherIndex] = otherVideo.currentTime*1000;
 				});
-				data[0] = index;
-				data[1] = video.currentTime;
-				
 				video.play();
 				videoNr = index + 1;
 				console.log('Video nr. ' + videoNr + ' spilles nå.');
 				console.log("Current Video time: " + videoTime[index])
-			});
+
+				const data = {
+					id: videoNr,
+					time: videoTime[videoNr],
+				}
+				// a POST request
+				const response = fetch('localhost:8001/setvideo', {
+					method: 'POST',
+					headers: {
+						'Content-Type': 'application/json; charset=utf-8'
+					},
+					body: JSON.stringify(data),
+					})
+				});	
 		});
+
+		//id: "id", type: "string", data: "navn på video"
+		//id: "time", type: "int", data: "Tidsstempel i video i ms"
+
+		//Sender over videoNr og videoTime[videoNr] som JSON
+		// {videoNr, videoTime[videoNr]}
 	</script>
 
 </body>
