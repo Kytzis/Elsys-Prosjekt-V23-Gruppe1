@@ -5,8 +5,8 @@ import time
 
 
 # Server settings
-hostname = '192.168.116.202'
-serverPort = 8001
+hostname = '192.168.182.202'
+serverPort = 8000
 dataName = "1"
 
 

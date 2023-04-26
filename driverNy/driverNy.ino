@@ -7,9 +7,16 @@
 
 Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 
-const char* ssid = "HUAWEI Mate 20 lite";
-const char* password = "Stian=DummeUnge";
-String serverIP = "http://192.168.116.202:8000/";
+//const char* ssid = "HUAWEI Mate 20 lite";
+//const char* password = "Stian=DummeUnge";
+
+//const char* ssid = "Freider sin iPhone";
+//const char* password = "neineinei";
+
+const char* ssid = "Kristian sin S22+";
+const char* password = "kristianwifi";
+
+String serverIP = "http://192.168.182.202:8000/";
 int curFrameIndex = -1;
 int frameIndex;
 String payload;

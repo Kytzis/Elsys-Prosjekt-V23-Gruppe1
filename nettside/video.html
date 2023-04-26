@@ -67,11 +67,11 @@
 
 				const data = {
 					id: videoNr,
-					time: videoTime[videoNr],
+					time: videoTime[videoNr-1],
 				}
                 console.log(JSON.stringify(data))
 				// a POST request
-				const response = fetch('http://192.168.116.202:8001/setvideo', {
+				const response = fetch('http://192.168.182.202:8000/setvideo', {
 					method: 'POST',
 					headers: {
 						'Content-Type': 'application/json; charset=utf-8'
